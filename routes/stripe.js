@@ -88,7 +88,7 @@ router.post('/create-checkout-session', async(req,res)=>{
   })
   res.send({ url: session.url });
 })
-
+[]
 // Create order function
 
 const createOrder = async (customer, data) => {
