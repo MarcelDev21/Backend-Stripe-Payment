@@ -32,12 +32,12 @@ router.post("/create-checkout-session", async (req, res) => {
   const customer = await stripe.customers.create({
     metadata: {
       userId: req.body.userId,
-      cart: JSON.stringify(req.body.cartItems),
+      cart: JSON.stringify(req.body.cartItem),
     },
   });
 
  
-  const line_items = req.body.cartItems.map((item) => {
+  const line_items = req.body.cartItem.map((item) => {
     return {
       price_data: {
         currency: "usd",
