@@ -90,7 +90,7 @@ router.post('/create-checkout-session', async(req,res)=>{
 })
 // Create order function
 
-const createOrder = async (customer, data) => {
+/*const createOrder = async (customer, data) => {
   const Items = JSON.parse(customer.metadata.cart);
 
   const products = Items.map((item) => {
@@ -117,7 +117,7 @@ const createOrder = async (customer, data) => {
   } catch (err) {
     console.log(err);
   }
-};
+};*/
 
 // Stripe webhoook
 
