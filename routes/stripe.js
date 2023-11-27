@@ -29,6 +29,7 @@ const checkoutSuccessPage = fs.readFileSync(
 
 
 router.post("/create-checkout-session", async (req, res) => {
+  console.log("es tu la")
   const customer = await stripe.customers.create({
     metadata: {
       userId: req.body.userId,
