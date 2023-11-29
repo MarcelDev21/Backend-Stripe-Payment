@@ -69,6 +69,7 @@ router.post("/create-checkout-session", async (req, res) => {
   });
 
   // res.redirect(303, session.url);
+  console.log("test serveur")
   res.send({ url: session.url });
 });
 
